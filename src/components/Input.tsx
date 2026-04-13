@@ -6,8 +6,7 @@ import {
     TextInputProps,
 } from "react-native";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { spacing } from "../theme";
+import { spacing, colors } from "../theme";
 
 type InputType = "email" | "password" | "user" | "search" | "text";
 
@@ -24,9 +23,9 @@ const iconMap = {
   text: 'text',
 } as const;
 
-export function Input({ label, type, ...rest }: InputProps) {
-    return (
-        <View style={styles.containerInput}>
+export function Input({ label, type, style, ...rest }: { style?: any, type?: InputType, label?: string } & InputProps) {
+    return ( 
+        <View style={[styles.containerInput, style]}>
             {label && <Text style={styles.label}>{label}</Text>}
 
             <View style={styles.input}>
@@ -49,12 +48,12 @@ export function Input({ label, type, ...rest }: InputProps) {
 const styles = StyleSheet.create({
     input: {
         width: "100%",
+        height: '100%',
         flexDirection: "row",
-        backgroundColor: "#6edcfd14",
-        borderColor: "#6edcfd20",
+        backgroundColor: colors.bgTerciario,
+        borderColor: colors.borders,
         borderRadius: 8,
         borderWidth: 1,
-        height: 50,
         alignItems: "center",
         gap: 6,
         paddingHorizontal: 10,
@@ -62,6 +61,7 @@ const styles = StyleSheet.create({
     containerInput: {
         width: "100%",
         marginTop: spacing.xxxl,
+        height: 48,
         
     },
     label: {

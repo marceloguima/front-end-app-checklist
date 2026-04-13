@@ -103,9 +103,9 @@ const styles = StyleSheet.create({
     },
     form: {
         width: sizes.full,
-        backgroundColor: colors.bgInput,
+        backgroundColor: colors.bgSecondary,
         borderWidth: borderWidth.default,
-        borderColor: colors.borderInput,
+        borderColor: colors.borders,
         paddingHorizontal: spacing.lg,
         paddingTop: spacing.xxxxl,
         paddingBottom: spacing.xxxl,

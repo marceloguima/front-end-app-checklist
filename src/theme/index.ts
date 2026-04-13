@@ -7,13 +7,14 @@
 // -------------------------------------------
 export const colors = {
     // Backgrounds
-    bgPrimary: "#010A18",           // fundo principal das telas
-    bgSecondary: "#010a18f1",           // fundo dos inputs e form
+    bgPrimary: "#010714",           // fundo principal das telas
+    bgSecondary: "#010d20",           // fundo dos inputs e form
+    bgTerciario: "#001020",           // fundo de abas e cards
     bgButtonPrimario: "#1E90FF",    // fundo do botão primário
     bgButtonSecundario: "#3baffc17",// fundo do botão secundário
 
     // Bordas
-    borders: "#a0c9f74d",       // borda dos inputs e form
+    borders: "#b0d4fc1e",       // borda dos inputs e form
 
     // Textos
     textPrimary: "#ffffff",         // textos principais
