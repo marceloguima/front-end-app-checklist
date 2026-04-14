@@ -20,7 +20,7 @@ const iconMap = {
   password: 'lock-outline',
   user: 'account-outline',
   search: 'magnify',
-  text: 'text',
+  text: '',
 } as const;
 
 export function Input({ label, type, style, ...rest }: { style?: any, type?: InputType, label?: string } & InputProps) {
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: '100%',
         flexDirection: "row",
-        backgroundColor: colors.bgTerciario,
+        backgroundColor: colors.bg300,
         borderColor: colors.borders,
         borderRadius: 8,
         borderWidth: 1,

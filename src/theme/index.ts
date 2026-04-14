@@ -7,9 +7,13 @@
 // -------------------------------------------
 export const colors = {
     // Backgrounds
-    bgPrimary: "#010714",           // fundo principal das telas
-    bgSecondary: "#010d20",           // fundo dos inputs e form
-    bgTerciario: "#001020",           // fundo de abas e cards
+    bg100: "#010714",           // fundo principal das telas
+    bg200: "#010d20",           // fundo dos inputs e form
+    bg300: "#001020",           // fundo de abas e cards
+    bg900: "#85caff1e",           // fundo de modais e dropdowns
+    bg1000: "#fd4848",          // alerta de erro (vermelho)
+    bg1001: "#fc61613a",          // alerta de sucesso (azul claro)
+
     bgButtonPrimario: "#1E90FF",    // fundo do botão primário
     bgButtonSecundario: "#3baffc17",// fundo do botão secundário
 
@@ -28,7 +32,7 @@ export const colors = {
     iconPrimary: "#1E90FF",         // ícones dos inputs
 
     // Feedback
-    error: "#ff4d4d",               // mensagens de erro
+  
 } as const;
 
 // -------------------------------------------

@@ -1,41 +1,41 @@
-import {View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, Pressable  } from "react-native";
 import { colors, spacing, fontSize } from "@/src/theme";
+import { Checkbox } from "react-native-paper";
+import { useState } from "react";
 
-export function OpcaoCheckBox({label, checked}: {label: string, checked: boolean}) {
+export function OpcaoCheckBox({
+    label,
+}: {
+    label: string;
+}) {
+    const [isChecked, setIsChecked] = useState(false);
+
     return (
-        <View style={styles.container}>
-            <View style={[styles.checkbox, checked && styles.checkboxChecked]} />
-            <Text style={styles.label}>{label}</Text>
-        </View>
+        <Pressable style={[styles.checkboxContainer, isChecked && styles.checked]} onPress={() => setIsChecked(!isChecked)}>
+            <Checkbox color={colors.bgButtonPrimario} uncheckedColor={colors.textSecondary}
+                status={isChecked ? "checked" : "unchecked"}
+            />
+            <Text style={styles.checkboxLabel}>{label}</Text>
+        </Pressable>
     );
 }
-
 const styles = StyleSheet.create({
-    container: {
-        width: 166,
-        height:64,
-        backgroundColor: colors.bgTerciario,
-        borderColor: colors.borders,
-        borderWidth: 1,
-        borderRadius: 8,
+    checkboxContainer: {
         flexDirection: "row",
         alignItems: "center",
-        gap: spacing.md,
-        paddingHorizontal: spacing.md,
-    },
-    checkbox: {
-        width: 20,
-        height: 20,
-        borderWidth: 2,
+        marginBottom: spacing.sm,
+        borderWidth: 1,
         borderColor: colors.borders,
-        borderRadius: 4,
+        borderRadius: spacing.sm,
+        padding: spacing.sm,
+        backgroundColor: colors.bg300,
     },
-    checkboxChecked: {
-        backgroundColor: colors.bgButtonPrimario,
-        borderColor: colors.bgButtonPrimario,
+    checked: {
+        backgroundColor: colors.bg900,
+        // borderColor: colors.bgButtonPrimario,
     },
-    label: {
+    checkboxLabel: {
+        fontSize: fontSize.md,
         color: colors.textPrimary,
-        fontSize: fontSize.sm,
     },
 });

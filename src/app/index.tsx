@@ -54,6 +54,7 @@ export default function LoginScreen() {
                         type="password"
                     />
                     <View style={styles.suporteContainer}>
+
                         <View style={styles.checkboxContainer}>
                             <Checkbox
                                 status={checked ? "checked" : "unchecked"}
@@ -91,7 +92,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.bgPrimary,
+        backgroundColor: colors.bg100,
         justifyContent: "center",
         paddingHorizontal: spacing.lg,
     },
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     },
     form: {
         width: sizes.full,
-        backgroundColor: colors.bgSecondary,
+        backgroundColor: colors.bg200,
         borderWidth: borderWidth.default,
         borderColor: colors.borders,
         paddingHorizontal: spacing.lg,
