@@ -46,9 +46,21 @@ export function Input({ label, type, style, ...rest }: { style?: any, type?: Inp
 }
 
 const styles = StyleSheet.create({
+    containerInput: {
+        width: "100%",
+        marginTop: spacing.xxxl,
+        height: 76,
+        paddingBottom: spacing.md,
+        
+    },
+    label: {
+        color: "#f0f0f0",
+        fontSize: 14,
+        marginBottom: 5,
+    },
     input: {
         width: "100%",
-        height: '100%',
+        height: '70%',
         flexDirection: "row",
         backgroundColor: colors.bg300,
         borderColor: colors.borders,
@@ -57,17 +69,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 6,
         paddingHorizontal: 10,
-    },
-    containerInput: {
-        width: "100%",
-        marginTop: spacing.xxxl,
-        height: 48,
-        
-    },
-    label: {
-        color: "#f0f0f0",
-        fontSize: 14,
-        marginBottom: 5,
     },
     textInput: {
         width: "100%",

@@ -17,15 +17,15 @@ import { Input } from "@/src/components/Input";
 import { OpcaoCheckBox } from "@/src/components/OpcaoCheckBox";
 import { CampoSalvaFoto } from "@/src/components/CampoSalvaFoto";
 import { BotaoPrimario } from "@/src/components/BotaoPrimario";
+import { Header } from "@/src/components/header";
+import { CardContainer } from "@/src/components/CardContainer";
 
 const statusBarHeight = Constants.statusBarHeight;
 
 export default function TelaCheckList() {
     return (
         <KeyboardAvoidingView style={styles.container} behavior="padding">
-            <Text style={styles.title}>
-                Adicione cada detalhe e fique tranquilo
-            </Text>
+            <Header />
             <ScrollView
                 contentContainerStyle={{
                     flexGrow: 1,
@@ -36,7 +36,11 @@ export default function TelaCheckList() {
                     gap: spacing.xxxl,
                 }}
             >
-                <View style={styles.containerItens}>
+                <Text style={styles.title}>
+                    Adicione cada detalhe e fique tranquilo
+                </Text>
+
+                <CardContainer>
                     <Text style={styles.subTitle}>Dados do Veículo</Text>
                     <Input
                         placeholder="Ex: Honda Civic"
@@ -53,8 +57,9 @@ export default function TelaCheckList() {
                         label="Atendente/vendedor"
                         type="text"
                     />
-                </View>
-                <View style={styles.containerItens}>
+                </CardContainer>
+
+                <CardContainer>
                     <Text style={styles.subTitle}>
                         Qual o motivo da visita à oficina?
                     </Text>
@@ -67,7 +72,6 @@ export default function TelaCheckList() {
                         <OpcaoCheckBox label="Problemas elétricos" />
                         <OpcaoCheckBox label="Outros" />
                     </View>
-                    {/* <Text style={styles.subTitle}>Obs:</Text> */}
                     <Input
                         placeholder="Adicione observações relevantes..."
                         label="Observações"
@@ -76,7 +80,7 @@ export default function TelaCheckList() {
                         numberOfLines={4}
                         style={styles.textarea}
                     />
-                </View>
+                </CardContainer>
                 <CampoSalvaFoto
                     title="Painel do veículo"
                     subTitle="Fotos do painel do veículo"
@@ -88,7 +92,11 @@ export default function TelaCheckList() {
                     descricaoImportante="Se o veículo apresenta algum dano estético como riscos, amassados ou parabrisas trincados, tire fotos para documentar."
                 />
 
-                <BotaoPrimario title="Salvar checklist" onPress={() => {}} style={{ marginBottom: spacing.xxxxl }} />
+                <BotaoPrimario
+                    title="Salvar checklist"
+                    onPress={() => {}}
+                    style={{ marginBottom: spacing.xxxxl }}
+                />
             </ScrollView>
         </KeyboardAvoidingView>
     );
@@ -112,15 +120,7 @@ const styles = StyleSheet.create({
         fontWeight: fontWeight.bold,
         marginBottom: spacing.md,
     },
-    containerItens: {
-        width: "100%",
-        paddingVertical: spacing.lg,
-        paddingHorizontal: spacing.lg,
-        backgroundColor: colors.bg200,
-        borderWidth: 1,
-        borderColor: colors.borders,
-        borderRadius: borderRadius.md,
-    },
+
     containerCheckboxes: {
         marginTop: spacing.xxxl,
     },
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
     },
     textarea: {
         textAlignVertical: "top",
-        height: 100,
+        height: 140,
+      
     },
 });

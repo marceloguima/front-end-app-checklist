@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet} from "react-native";
-import { colors, spacing, fontSize, fontWeight } from "@/src/theme";
+import { colors, spacing, fontSize, fontWeight, borderRadius } from "@/src/theme";
 import { BotaoPrimario } from "./BotaoPrimario";
 import { CampoAviso } from "./CampoAviso";
 
@@ -19,13 +19,12 @@ const styles = StyleSheet.create({
         width: "100%",
         flex: 1,
         gap: spacing.xxl,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: colors.bg200,
+        alignItems: "center",
         padding: spacing.lg,
         borderWidth: 1,
         borderColor: colors.borders,
-        borderRadius: spacing.md,   
+        borderRadius: borderRadius.md,   
         marginBottom: spacing.xxxxl,
     },
     title: {

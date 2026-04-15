@@ -14,8 +14,6 @@ import {
     sizes,
 } from "@/src/theme/index";
 import { Header } from "@/src/components/header";
-import { Input } from "@/src/components/Input";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { BotaoPrimario } from "@/src/components/BotaoPrimario";
 
 export default function Home() {
@@ -23,7 +21,7 @@ export default function Home() {
         <KeyboardAvoidingView style={styles.container} behavior="padding">
             <Header />
             <ScrollView
-                contentContainerStyle={{
+                contentContainerStyle={{ 
                     flexGrow: 1,
                     width: "100%",
                     justifyContent: "center",
@@ -31,7 +29,6 @@ export default function Home() {
                     paddingHorizontal: spacing.xl,
                 }}
             >
-                <Input placeholder="Buscar..." type="search" />
                 <BotaoPrimario
                     style={{ marginVertical: 350 }}
                     title="Adicionar um checklist"

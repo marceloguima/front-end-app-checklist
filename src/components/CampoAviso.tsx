@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet,} from "react-native";
-import { colors } from "@/src/theme";
+import { colors, spacing, borderRadius, fontSize } from "@/src/theme";
 
 export function CampoAviso({ title, descricao }: { title: string; descricao: string }) {
     return (
@@ -13,11 +13,11 @@ export function CampoAviso({ title, descricao }: { title: string; descricao: str
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        padding: 16,
+        padding: spacing.xs,
         backgroundColor: colors.bg1001,
         borderWidth: 1,
         borderColor: colors.bg1000,
-        borderRadius: 8,
+        borderRadius: borderRadius.md,
         alignItems: "center",   
     },
     title: {

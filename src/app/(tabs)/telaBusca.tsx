@@ -1,24 +1,44 @@
-import { colors } from '@/src/theme';
-import {View, Text, StyleSheet} from 'react-native';
+import { Header } from "@/src/components/header";
+import { Input } from "@/src/components/Input";
+import { colors, fontSize, spacing } from "@/src/theme";
+import {
+    View,
+    Text,
+    StyleSheet,
+    KeyboardAvoidingView,
+    ScrollView,
+} from "react-native";
 
 export default function TelaBusca() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.title} >Tela de Busca</Text>  
-        </View>
+        <KeyboardAvoidingView style={styles.container}>
+            <Header />
+            <ScrollView
+                contentContainerStyle={{
+                    flexGrow: 1,
+                    width: "100%",
+                    paddingHorizontal: spacing.xl,
+                    alignItems: "center",
+                }}
+            >
+                <Input placeholder="Buscar..." type="search" />
+                <Text style={styles.info}>
+                    Busque por modelo ou placa do veículo.
+                </Text>
+            </ScrollView>
+        </KeyboardAvoidingView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: colors.bg100,
     },
-    title: {
+    info: {
         color: colors.textPrimary,
-        fontSize: 24,
+        fontSize: fontSize.md,
         fontWeight: "bold",
+        marginTop: spacing.xxxl,
     },
 });
