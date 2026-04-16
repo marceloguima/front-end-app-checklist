@@ -1,9 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { boxShadow, colors } from "@/src/theme";
 
 
-export function BotaoPrimario({ title, style, onPress }: { title: string; style?: any; onPress: () => void }) {
+export function BotaoPrimario({ title, style, onPress, children }: { title: string; style?: any; onPress: () => void; children?: React.ReactNode }) {
     return (
         <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
+            {children}
             <Text style={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );
@@ -11,16 +13,20 @@ export function BotaoPrimario({ title, style, onPress }: { title: string; style?
 
 const styles = StyleSheet.create({
     button: {
+        flexDirection: "row",
+        justifyContent: "center",
+        gap: 10,
         width: "100%",
-        backgroundColor: "#1E90FF", 
+        backgroundColor: colors.bg300, 
         paddingVertical: 15,
         paddingHorizontal: 40,
         borderRadius: 8,    
         alignItems: "center",
-        margin:10
+        margin:10,
+        boxShadow: boxShadow.default,
     },
     buttonText: {
-        color: "#ffffff",
+        color: colors.bg100,
         fontSize: 16,
         fontWeight: "bold",
     },

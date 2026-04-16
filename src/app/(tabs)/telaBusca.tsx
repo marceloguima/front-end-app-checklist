@@ -11,7 +11,7 @@ import {
 
 export default function TelaBusca() {
     return (
-        <KeyboardAvoidingView style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior="padding">
             <Header />
             <ScrollView
                 contentContainerStyle={{

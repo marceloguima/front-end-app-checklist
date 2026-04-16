@@ -31,7 +31,7 @@ export default function Home() {
             >
                 <BotaoPrimario
                     style={{ marginVertical: 350 }}
-                    title="Adicionar um checklist"
+                    title="Começar um checklist"
                     onPress={() => {}}
                 />
             </ScrollView>

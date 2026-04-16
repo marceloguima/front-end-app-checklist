@@ -12,7 +12,7 @@ import { Header } from "@/src/components/header";
 
 export default function TelaHistorico() {
     return (
-        <KeyboardAvoidingView style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior="padding">
             <Header />
             <ScrollView
                 contentContainerStyle={{

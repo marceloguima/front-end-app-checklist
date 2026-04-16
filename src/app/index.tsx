@@ -4,6 +4,7 @@ import {
     StyleSheet,
     KeyboardAvoidingView,
     ScrollView,
+    StatusBar
 } from "react-native";
 import { router } from "expo-router";
 import { Input } from "@/src/components/Input";
@@ -34,6 +35,7 @@ export default function LoginScreen() {
 
     return (
         <KeyboardAvoidingView style={styles.container} behavior="padding">
+                <StatusBar barStyle="dark-content" backgroundColor={colors.bg300} />
             <ScrollView
                 contentContainerStyle={{
                     flexGrow: 1,

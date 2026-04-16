@@ -12,7 +12,7 @@ export function OpcaoCheckBox({
 
     return (
         <Pressable style={[styles.checkboxContainer, isChecked && styles.checked]} onPress={() => setIsChecked(!isChecked)}>
-            <Checkbox color={colors.bgButtonPrimario} uncheckedColor={colors.textSecondary}
+            <Checkbox color={colors.bg300} uncheckedColor={colors.bg500}
                 status={isChecked ? "checked" : "unchecked"}
             />
             <Text style={styles.checkboxLabel}>{label}</Text>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         borderColor: colors.borders,
         borderRadius: spacing.sm,
         padding: spacing.sm,
-        backgroundColor: colors.bg300,
+        backgroundColor: colors.bg200,
     },
     checked: {
         backgroundColor: colors.bg900,

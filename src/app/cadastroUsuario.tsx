@@ -174,7 +174,6 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         width: "100%",
-        marginBottom: 10,
     },
     suporteContainer: {
         width: "100%",

@@ -2,6 +2,7 @@ import {View, Text, StyleSheet} from "react-native";
 import { colors, spacing, fontSize, fontWeight, borderRadius } from "@/src/theme";
 import { BotaoPrimario } from "./BotaoPrimario";
 import { CampoAviso } from "./CampoAviso";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export function CampoSalvaFoto({ title, subTitle, descricaoImportante }: { title: string; subTitle: string; descricaoImportante: string }) {  
     return (
@@ -9,7 +10,9 @@ export function CampoSalvaFoto({ title, subTitle, descricaoImportante }: { title
             <Text style={styles.title} >{title}</Text>  
             <Text style={styles.subtitle} >{subTitle}</Text>  
             <CampoAviso title="Importante!" descricao={descricaoImportante} />
-            <BotaoPrimario title="Abrir câmera" onPress={() => {}} style={{ marginTop: spacing.md }} />
+            <BotaoPrimario title="Abrir câmera" onPress={() => {}} style={{ marginTop: spacing.md }} >
+<FontAwesome name="camera" size={24} color={colors.bg100} />
+            </BotaoPrimario>
         </View>
     );
 }

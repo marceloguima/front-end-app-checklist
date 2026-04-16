@@ -7,23 +7,28 @@
 // -------------------------------------------
 export const colors = {
     // Backgrounds
-    bg100: "#010714",           // fundo principal das telas
-    bg200: "#010d20",           // fundo dos inputs e form
-    bg300: "#001020",           // fundo de abas e cards
-    bg900: "#85caff1e",           // fundo de modais e dropdowns
+    bg100: "#fafafa",           // fundo principal das telas
+    bg200: "#f3f3f3",           // fundo de containers e cards
+    bg300: "#1681ec",           // fundo de abas e cards
+        bg400: "#67b3ff",           // fundo de botões primários
+    bg500: "#1E90FF80",       
+    bg600: "#1e8fff27",      
+    bg700: "#1e8fff1a",
+    bg800: "#1e8fff0d", 
+    bg900: "#85caff38",           // fundo de modais e dropdowns
     bg1000: "#fd4848",          // alerta de erro (vermelho)
     bg1001: "#fc61613a",          // alerta de sucesso (azul claro)
 
-    bgButtonPrimario: "#1E90FF",    // fundo do botão primário
+
     bgButtonSecundario: "#3baffc17",// fundo do botão secundário
 
     // Bordas
-    borders: "#b0d4fc1e",       // borda dos inputs e form
+    borders: "#dbdbdb",       // borda dos inputs e form
 
     // Textos
-    textPrimary: "#ffffff",         // textos principais
+    textPrimary: "#2b2b2b",         // textos principais
     textSecondary: "#f0f0f0",       // labels dos inputs
-    textMuted: "#ffffff80",         // textos de suporte (opacidade 50%)
+    textButton: "#010714",         // texto dos botões
     textOpcao: "#ffffffda",         // texto "Ou" (opacidade 85%)
     textPlaceholder: "#747474",     // placeholder dos inputs
     textLink: "#1E90FF",            // links clicáveis
@@ -71,6 +76,9 @@ export const spacing = {
 export const borderRadius = {
     sm: 8,    // inputs e botões
     md: 12,   // form container
+    lg: 16,   // cards
+    xl: 20,   // modais
+    xxl: 24,  // dropdowns
 } as const;
 
 export const borderWidth = {
@@ -84,6 +92,10 @@ export const sizes = {
     inputHeight: 50,
     iconSize: 24,
     iconFull: 28,
-    iconDestak:36,
+    iconDestak:48,
     full: "100%" as const,
+} as const;
+
+export const boxShadow = {
+    default: "0px 2px 4px rgba(0, 0, 0, 0.18)",
 } as const;

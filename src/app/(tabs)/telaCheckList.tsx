@@ -45,17 +45,17 @@ export default function TelaCheckList() {
                     <Input
                         placeholder="Ex: Honda Civic"
                         label="Modelo"
-                        type="text"
+                      
                     />
                     <Input
                         placeholder="Ex: nbu1234"
                         label="Placa"
-                        type="text"
+                       
                     />
                     <Input
                         placeholder="Ex: João"
                         label="Atendente/vendedor"
-                        type="text"
+                       
                     />
                 </CardContainer>
 
@@ -74,8 +74,8 @@ export default function TelaCheckList() {
                     </View>
                     <Input
                         placeholder="Adicione observações relevantes..."
-                        label="Observações"
-                        type="text"
+                        label="Observações:"
+                        type="none"
                         multiline={true}
                         numberOfLines={4}
                         style={styles.textarea}
@@ -118,11 +118,10 @@ const styles = StyleSheet.create({
         color: colors.textPrimary,
         fontSize: fontSize.lg,
         fontWeight: fontWeight.bold,
-        marginBottom: spacing.md,
     },
 
     containerCheckboxes: {
-        marginTop: spacing.xxxl,
+        marginTop: spacing.xl,
     },
     itensCheckBox: {
         flexDirection: "row",

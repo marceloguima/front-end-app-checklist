@@ -6,9 +6,9 @@ import {
     TextInputProps,
 } from "react-native";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import { spacing, colors } from "../theme";
+import { spacing, colors, boxShadow, fontSize} from "../theme";
 
-type InputType = "email" | "password" | "user" | "search" | "text";
+type InputType = "email" | "password" | "user" | "search" | "none";
 
 interface InputProps extends TextInputProps {
     label?: string;
@@ -20,7 +20,7 @@ const iconMap = {
   password: 'lock-outline',
   user: 'account-outline',
   search: 'magnify',
-  text: '',
+  none: undefined,
 } as const;
 
 export function Input({ label, type, style, ...rest }: { style?: any, type?: InputType, label?: string } & InputProps) {
@@ -29,12 +29,15 @@ export function Input({ label, type, style, ...rest }: { style?: any, type?: Inp
             {label && <Text style={styles.label}>{label}</Text>}
 
             <View style={styles.input}>
-                <MaterialCommunityIcons
-                    name={iconMap[type ?? "text"]}
 
-                    size={24}
-                    color="#1E90FF"
-                />
+                {iconMap[type] && (
+                    <MaterialCommunityIcons
+                        name={iconMap[type]}
+                        size={20}
+                        color={colors.bg300}
+                    />
+                )}
+              
                 <TextInput
                     style={styles.textInput}
                     {...rest}
@@ -48,27 +51,28 @@ export function Input({ label, type, style, ...rest }: { style?: any, type?: Inp
 const styles = StyleSheet.create({
     containerInput: {
         width: "100%",
-        marginTop: spacing.xxxl,
+        // marginTop: spacing.md,
         height: 76,
-        paddingBottom: spacing.md,
         
     },
     label: {
-        color: "#f0f0f0",
-        fontSize: 14,
+        color: colors.textPrimary,
+        fontSize: fontSize.md,
+        fontWeight: "bold",
         marginBottom: 5,
     },
     input: {
         width: "100%",
         height: '70%',
         flexDirection: "row",
-        backgroundColor: colors.bg300,
+        backgroundColor: colors.bg100,
         borderColor: colors.borders,
         borderRadius: 8,
         borderWidth: 1,
         alignItems: "center",
         gap: 6,
         paddingHorizontal: 10,
+        boxShadow: boxShadow.default,
     },
     textInput: {
         width: "100%",
